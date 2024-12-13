@@ -67,25 +67,39 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
 
 ## 🧩 Pembuatan dan Konfigurasi Model
 
-1. **Buat Model `Schedules`**  
+1. **Buat Model `Mahasiswa`**  
    
    Gunakan flag `-ms` untuk secara otomatis membuat migration dan seeder:
 
    ```bash
-   php artisan make:model Schedules -ms
+   php artisan make:model Mahasiswa -ms
    ```
 
 2. **Sesuaikan Migration**
    
-   Buka file migration yang dihasilkan di dalam folder database/migrations dan sesuaikan skema sesuai kebutuhan proyek.
+   Buka file migration yang dihasilkan di dalam folder `database/migrations/2024_12_13_193044_create_mahasiswas_table.php` dan sesuaikan skema sesuai kebutuhan proyek.
+   ![table](img/table_mahasiswa.png)
 
 3. **Sesuaikan Seeder**
    
-   Sesuaikan seeder pada file database/seeders untuk menambahkan data awal pada tabel Schedules jika diperlukan.
+   Sesuaikan seeder pada file src/database/seeders untuk menambahkan data awal pada tabel yang diperlukan.
+
+   - DatabaseSeeder
+   ![table](img/databaseSeeder.png)
+
+   - RoleSeeder
+   ![table](img/roleSeeder.png)
+
+   - MahasiswaSeeder
+   ![table](img/mahasiswaSeeder.png)
+
+
 
 4. **Sesuaikan Model**
    
-   Edit model Schedules di dalam folder app/Models sesuai dengan kebutuhan analisis Anda.
+   Edit model Schedules di dalam folder src/app/Models sesuai dengan kebutuhan analisis Anda.
+   - Mahasiswa
+   ![table](img/modelMahasiswa.png)
 
 ---
 
