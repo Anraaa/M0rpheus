@@ -37,7 +37,7 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
 1. **Edit File `.env`**
    
    Sesuaikan konfigurasi di file `.env` sesuai kebutuhan proyek kalian di `src/.env`.
-   ![env](Doc/img/env.png)
+   ![env](img/env.png)
 
 2. **Generate Kunci Aplikasi**
    ```bash
