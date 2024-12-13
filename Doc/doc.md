@@ -107,7 +107,7 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
 
 1. **Generate Filament Resource**
    ```bash
-   php artisan make:filament-resource Schedules --generate
+   php artisan make:filament-resource Mahasiswa --generate
    ```
 
 2. **Jalankan Migrasi**
