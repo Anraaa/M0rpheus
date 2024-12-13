@@ -31,9 +31,9 @@ Sistem tidak mencakup modul untuk pembayaran, jadwal akademik, atau manajemen ma
 | **Peran Utama**       | Admin adalah pengguna dengan akses penuh untuk mengelola data mahasiswa dan fitur dalam sistem. |
 | **Latar Belakang**    | - Memiliki pengetahuan dasar tentang sistem informasi.<br>- Terbiasa menggunakan aplikasi berbasis web. |
 | **Kemampuan Teknis**  | - Mampu memahami alur kerja aplikasi (CRUD: Create, Read, Update, Delete).<br>- Familiar dengan navigasi dashboard Laravel Filament.<br>- Dapat mengelola data secara akurat. |
-| **Tanggung Jawab**    | - Menambah, mengedit, menghapus, dan melihat data mahasiswa.<br>- Mengelola laporan data mahasiswa dalam format CSV atau PDF.<br>- Menjaga validitas dan keamanan data yang dikelola. |
-| **Kebutuhan Khusus**  | - Antarmuka yang sederhana dan intuitif.<br>- Validasi otomatis pada data input untuk mencegah kesalahan. |
-| **Tujuan Utama**      | - Memastikan data mahasiswa selalu terbaru dan valid.<br>- Mendukung proses pencatatan dan pelaporan data mahasiswa dengan cepat dan efisien. |
+| **Tanggung Jawab**    | - Menambah, mengedit, menghapus, dan melihat data mahasiswa.<br>- Menjaga validitas dan keamanan data yang dikelola. |
+| **Kebutuhan Khusus**  | - Antarmuka yang sederhana dan intuitif.|
+| **Tujuan Utama**      | - Memastikan data mahasiswa selalu terbaru dan valid.<br>- Mendukung proses pencatatan data mahasiswa dengan cepat dan efisien. |
 | **Batasan Kemampuan** | - Tidak selalu memiliki kemampuan teknis yang mendalam terkait pengelolaan server atau troubleshooting teknis. |
 
 ## 5. Fitur Utama
