@@ -123,3 +123,5 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
 ---
 
 ## Yuhuu kelar 🎉
+
+> :memo: **Catatan:** klo error berarti uda takdir.
