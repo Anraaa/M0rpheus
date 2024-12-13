@@ -39,7 +39,7 @@ Sistem tidak mencakup modul untuk pembayaran, jadwal akademik, atau manajemen ma
 ## 5. Fitur Utama
 ### 5.1 Pendaftaran Mahasiswa
 - Admin dapat menambahkan data mahasiswa baru ke dalam sistem.
-- Field yang harus disimpan: NIM, Nama, Tanggal Lahir, Program Studi, Fakultas, Tahun Masuk.
+- Field yang harus disimpan: NIM, Nama, Tanggal Lahir, Program Studi, Fakultas, dan Tahun Masuk.
 
 ### 5.2 Pengelolaan Data Mahasiswa
 - **Tambah Data:** Admin dapat menambahkan data mahasiswa baru.
