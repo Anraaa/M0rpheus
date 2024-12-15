@@ -7,16 +7,12 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
 1. **Ekstrak File Proyek**  
    ```bash
    unzip sampleapp.zip
-   ```
-
-   ```bash
    cd sampleapp
    ```
 
 2. **Jalankan Docker**
    
    Buka Docker terlebih dahulu untuk memulai, lalu jalankan perintah berikut:
-
    ```bash
    docker compose up -d
    ```
@@ -26,18 +22,39 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
    docker exec -it sample bash
    ```
 
-4. **Buat Proyek dengan Composer**
+## 🔧 Instalasi Laravel dan Filament
+
+1. **Buat Proyek Laravel**
+   Gunakan Composer untuk membuat proyek Laravel baru:
    ```bash
-   composer create-project --prefer-dist raugadh/fila-starter .
+   composer create-project --prefer-dist laravel/laravel .
    ```
 
----
+2. **Install Filament**
+   Install Filament untuk panel admin:
+   ```bash
+   composer require filament/filament
+   ```
+
+3. **Install Filament Panels**
+   Jalankan perintah untuk menginstal panel Filament:
+   ```bash
+   php artisan filament:install --panels
+   ```
 
 ## 🔧 Konfigurasi Lingkungan
+
 1. **Edit File `.env`**
    
    Sesuaikan konfigurasi di file `.env` sesuai kebutuhan proyek kalian di `src/.env`.
-   ![env](img/env.png)
+   ```bash
+   DB_CONNECTION=mysql
+   DB_HOST=db       
+   DB_PORT=3306     
+   DB_DATABASE=laravel  
+   DB_USERNAME=root    
+   DB_PASSWORD=p455w0rd  
+   ```
 
 2. **Generate Kunci Aplikasi**
    ```bash
@@ -60,17 +77,32 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
    chown -R www-data:www-data bootstrap/*
    ```
 
-6. **Inisialisasi Proyek**
+6. **Buat Pengguna Filament**
+   Buat pengguna admin untuk Filament:
    ```bash
-   php artisan project:init
+   php artisan make:filament-user
+   ```
+
+## 🔧 Spatie Laravel Permission
+
+1. **Install Spatie Laravel Permission package**
+   ```bash
+   composer require spatie/laravel-permission
+   ```
+
+2. **Publikasikan File Migrasi**
+   ```bash
+   php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+   ```
+3. **Jalankan Migrasi**
+   ```bash
+   php artisan migrate
    ```
 
 ## 🧩 Pembuatan dan Konfigurasi Model
 
 1. **Buat Model `Mahasiswa`**  
-   
    Gunakan flag `-ms` untuk secara otomatis membuat migration dan seeder:
-
    ```bash
    php artisan make:model Mahasiswa -ms
    ```
@@ -82,26 +114,19 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
 
 3. **Sesuaikan Seeder**
    
-   Sesuaikan seeder pada file src/database/seeders untuk menambahkan data awal pada tabel yang diperlukan.
-
+   Sesuaikan seeder pada file `src/database/seeders` untuk menambahkan data awal pada tabel yang diperlukan.
    - DatabaseSeeder
    ![table](img/databaseSeeder.png)
-
    - RoleSeeder
    ![table](img/roleSeeder.png)
-
    - MahasiswaSeeder
    ![table](img/mahasiswaSeeder.png)
 
-
-
 4. **Sesuaikan Model**
    
-   Edit model Schedules di dalam folder src/app/Models sesuai dengan kebutuhan analisis Anda.
+   Edit model `Mahasiswa` di dalam folder `src/app/Models` sesuai dengan kebutuhan analisis Anda.
    - Mahasiswa
    ![table](img/modelMahasiswa.png)
-
----
 
 ## 🎉 Langkah Terakhir
 
@@ -120,8 +145,7 @@ Panduan ini akan memandu Kalian dalam mengonfigurasi **SampleApp** menggunakan D
    php artisan project:init
    ```
 
----
-
 ## Yuhuu kelar 🎉
 
 > :memo: **Catatan:** pasti bener, klo error berarti uda takdir.
+
