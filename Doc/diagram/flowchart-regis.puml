@@ -1,0 +1,28 @@
+@startuml flowchart
+title Flowchart Registrasi dan Login Mahasiswa
+
+start
+:Buka link website (contoh localhost);
+
+if (Punya Akun?) then (Ya)
+    :Masukkan Email dan Password;
+    :Cek Kredensial;
+    if (Kredensial Valid?) then (Ya)
+        :Login Berhasil;
+        :Akses Jadwal Perkuliahan;
+        :Melihat Jadwal Perkuliahan;
+        :Logout;
+    else
+        :Tampilkan "Kredensial Tidak Valid";
+        :Kembali ke Halaman Login;
+    endif
+else
+    :Klik Tombol Registrasi;
+    :Isi Form Registrasi (Nama, NIM, Email, Password);
+    :Kirim Data Registrasi;
+    :Tampilkan "Registrasi Berhasil";
+    :Kembali ke Halaman Login;
+endif
+
+stop
+@enduml

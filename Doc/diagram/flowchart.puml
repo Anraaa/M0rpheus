@@ -1,0 +1,43 @@
+@startuml flowchart
+title Flowchart untuk Cek Jadwal Mata Kuliah Mahasiswa Fakultas Ilmu Komputer Berbasis Website (Filament)
+
+start
+:Buka link website (contoh localhost);
+
+:Login;
+
+:Masukkan Email dan Password;
+
+:Cek Kredensial;
+
+if (Kredensial Valid?) then (Ya)
+    if (Admin?) then (Ya)
+        :Login Sebagai Admin;
+        :Akses Data Jadwal Perkuliahan;
+        :Pilih Aksi;
+        if (Aksi = Tambah Data Jadwal Kuliah) then (Tambah Jadwal Kuliah)
+            :Masukkan Detail Jadwal Perkuliahan;
+            :Simpan Data Jadwal Kuliah;
+        elseif (Aksi = Edit Data Jadwal Perkuliahan) then (Edit Jadwal Kuliah)
+            :Pilih Data Jadwal Kuliah Yang Akan Diedit;
+            :Perbarui Detail Data Jadwal Kuliah;
+            :Simpan Perubahan;
+        elseif (Aksi = Hapus Data Jadwal Kuliah) then (Hapus Jadwal Kuliah)
+            :Pilih Data Jadwal Perkuliahan yang Akan Dihapus;
+            :Konfirmasi Penghapusan;
+        endif
+        :Logout;
+    else
+        if (Mahasiswa?) then (Ya)
+            :Login Sebagai Mahasiswa;
+            :Akses Jadwal Perkuliahan;
+            :Melihat Jadwal Perkuliahan;
+            :Logout;
+    endif
+else
+    :Tampilkan "Kredensial Tidak Valid";
+    :Kembali ke Halaman Login;
+endif
+
+stop
+@enduml
