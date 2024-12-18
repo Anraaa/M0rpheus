@@ -66,4 +66,5 @@ Sistem tidak mencakup pengelolaan keuangan untuk pembayaran, atau manajemen mata
 - **Navigasi Mudah:** Akses intuitif untuk melihat detail jadwal.
 
 ## 9. Lampiran 
-
+### 9.1 Flowchart 
+Untuk diagram flowchart, bisa dilihat pada `Doc/diagram/` atau bisa [klik disini](Doc/diagram/)
